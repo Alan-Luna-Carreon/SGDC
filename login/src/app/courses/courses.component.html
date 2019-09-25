@@ -1,0 +1,31 @@
+<div>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nombre del Curso</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escriba el nombre del curso">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Descripcion Corta</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Escriba una breve Descripcion">
+  </div>
+ <div class="form-group">
+    <label for="exampleInputPassword1">Descripcion</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Escriba el contenido del curso">
+  </div>
+ <div class="col mx-3" style="min-width:100px;">
+    <div class="border" *ngIf="showCalendar">
+      <dl-date-time-picker
+        [(maxView)]="maxView"
+        [(minView)]="minView"
+        [(startView)]="startView"
+        [(minuteStep)]="minuteStep"
+        (change)="onCustomDateChange($event)"></dl-date-time-picker>
+    </div>
+    <p>Selected Date: {{selectedDate}}</p>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Seleccionar Imagen</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <button type="submit" class="btn btn-primary">Añadir</button>
+
+</div>
