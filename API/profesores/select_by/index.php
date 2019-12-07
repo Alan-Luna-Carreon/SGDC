@@ -40,7 +40,7 @@
       }
 
       while ( $r = $select_by->fetch_assoc() ) {
-        $profesores[] = $r; // #TODO: Verificar que datos no vamos a necesitar en está consulta 
+        $profesor_solicitado[] = $r; // #TODO: Verificar que datos no vamos a necesitar en está consulta 
       }
       $mysqli->close();
 

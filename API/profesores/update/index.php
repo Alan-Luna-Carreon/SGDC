@@ -23,7 +23,7 @@
        */
       $id_profesor = addslashes($profesor->id_profesor);
       $titulo = addslashes($profesor->titulo);
-      $codigo_udeg = addslashes($profesor->codigo_udeg);
+      $codigo_udg = addslashes($profesor->codigo_udg);
       $nombres = addslashes($profesor->nombres);
       $apellido_paterno = addslashes($profesor->apellido_paterno);
       $apellido_materno = addslashes($profesor->apellido_materno);
@@ -41,7 +41,7 @@
       
       $query = "UPDATE profesores SET
                   titulo = '$titulo', -- NOT NULL
-                  codigo_udeg = '$codigo_udeg', -- NOT NULL
+                  codigo_udg = '$codigo_udg', -- NOT NULL
                   nombres = '$nombres', -- NOT NULL
                   apellido_paterno = '$apellido_paterno', -- NOT NULL
                   apellido_materno = '$apellido_materno', 

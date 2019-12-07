@@ -17,94 +17,104 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Nombre">
+                                        <input matInput placeholder="Nombre" [(ngModel)]="nombres" [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Apellido Paterno" type="text">
+                                        <input matInput placeholder="Apellido Paterno" type="text" [(ngModel)]="apellido_paterno" [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Apellido Materno" type="text">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Titulo del Profesor">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-4">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Codigo">
+                                        <input matInput placeholder="Apellido Materno" type="text" [(ngModel)]="apellido_materno" [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-2">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Edad" type="text">
+                                        <input matInput placeholder="Edad" type="text" [(ngModel)]="fecha_nacimiento" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-2">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Codigo UdeG" [(ngModel)]="codigo_udg" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-2">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Antigüedad" type="text" [(ngModel)]="antiguedad" [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Telefono" type="text">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Antigüedad" type="text">
-                                    </mat-form-field>
-                                </div>
+                              <div class="col-md-12">
+                                <strong><h3><p>Datos de contacto:</p></h3></strong>
+                              </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Correo Principal" type="email">
+                                        <input matInput placeholder="Telefono" type="text" [(ngModel)]="telefono" [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Correo Secundario" type="text">
+                                        <input matInput placeholder="Correo Principal" type="email" [(ngModel)]="correo_principal" [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Categoria" type="text">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-4">
-                                    <mat-form-field class="example-full-width">
-                                        <mat-label>Nombramiento</mat-label>
-                                        <select matNativeControl required>
-                      <option value="completo">Tiempo Completo</option>
-                      <option value="medio">Medio </option>
-                      <option value="asignatura">Asignatura</option>
-                    </select>
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-4">
-                                    <mat-form-field class="example-full-width">
-                                        <mat-label>Nivel</mat-label>
-                                        <select matNativeControl required>
-                      <option value="completo">A</option>
-                      <option value="medio">B </option>
-                      <option value="asignatura">C</option>
-                    </select>
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-4">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Materia que imparten" type="text">
+                                        <input matInput placeholder="Correo Secundario" type="text" [(ngModel)]="correo_secundario" [ngModelOptions]="{standalone: true}">
                                     </mat-form-field>
                                 </div>
                             </div>
 
-                            <button mat-raised-button type="submit" class="btn btn-danger
-                pull-right">Añadir</button>
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <strong><h3><p>Datos academicos:</p></h3></strong>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Categoria" type="text" [(ngModel)]="categoria" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Titulo" [(ngModel)]="titulo" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">                        
+                                    <mat-form-field>
+                                        <mat-label>Nombramiento</mat-label>
+                                        <mat-select [(ngModel)]="nombramiento" [ngModelOptions]="{standalone: true}">
+                                            <mat-option *ngFor="let nombramiento of nombramientos" [value]="nombramiento.value">
+                                                {{nombramiento.viewValue}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">                        
+                                    <mat-form-field>
+                                        <mat-label>Nivel</mat-label>
+                                        <mat-select [(ngModel)]="nivel" [ngModelOptions]="{standalone: true}">
+                                            <mat-option *ngFor="let nivel of niveles" [value]="nivel.value">
+                                                {{nivel.viewValue}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Materia que imparten" type="text" [(ngModel)]="materias" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <button mat-raised-button (click)="actionButtonClicked()" type="submit" class="btn btn-danger pull-right">
+                                {{ texto_boton }}
+                            </button>
                             <div class="clearfix"></div>
                         </form>
                     </div>

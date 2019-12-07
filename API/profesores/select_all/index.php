@@ -11,7 +11,7 @@
   $headers = apache_request_headers();
   $api_key = '7cc263a1-a490-4337-8302-151490495e56';
 
-  require_once('../mysqli.php'); // Archivo global con las conexiones a la base de datos
+  require_once('../../mysqli.php'); // Archivo global con las conexiones a la base de datos
 
   if(isset($headers['X-Api-Key'])){ // Primer nivel de seguridad
     if($headers['X-Api-Key'] === $api_key){ // Segundo nivel de seguridad

@@ -20,6 +20,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { AgmCoreModule } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ProfesoresComponent } from './profesores/profesores.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    ProfesoresComponent,
 
   ],
   providers: [],
