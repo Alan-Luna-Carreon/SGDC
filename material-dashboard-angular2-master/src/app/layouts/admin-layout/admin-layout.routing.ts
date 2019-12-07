@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '../../dashboard/dashboard.component';
+/* Modulos a conservar */
 import { RegistroProfesoresComponent } from '../../registro-profesores/registro-profesores.component';
+import { ProfesoresComponent } from '../../profesores/profesores.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
@@ -55,6 +57,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'registro-profesores',   component: RegistroProfesoresComponent },
     { path: 'registro-profesores/:id',   component: RegistroProfesoresComponent },
+    { path: 'listado-profesores',   component: ProfesoresComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },

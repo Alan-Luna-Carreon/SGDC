@@ -39,7 +39,6 @@ import { ProfesoresComponent } from './profesores/profesores.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    ProfesoresComponent,
 
   ],
   providers: [],
