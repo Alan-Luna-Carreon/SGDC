@@ -54,6 +54,7 @@ export class ProfesoresComponent implements OnInit {
       response => {
         if(!response.error){
           this.showNotification('success', response.msj );
+          this.select_all();
         } else {
           this.showNotification('danger',response.msj);
         }
@@ -63,7 +64,6 @@ export class ProfesoresComponent implements OnInit {
         this.showNotification('danger',error);
       }
     );
-    this.select_all();
   }
 
   /**
