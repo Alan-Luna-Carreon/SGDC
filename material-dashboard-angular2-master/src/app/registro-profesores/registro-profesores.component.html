@@ -1,0 +1,116 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title"> {{ texto_cabecera }} </h4>
+                        <p class="card-category"> {{ texto_subcabecera }} </p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <strong><h3><p>Información del profesor:</p></h3></strong>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Nombre">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Apellido Paterno" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Apellido Materno" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Titulo del Profesor">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Codigo">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-2">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Edad" type="text">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Telefono" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Antigüedad" type="text">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Correo Principal" type="email">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Correo Secundario" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Categoria" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Nombramiento</mat-label>
+                                        <select matNativeControl required>
+                      <option value="completo">Tiempo Completo</option>
+                      <option value="medio">Medio </option>
+                      <option value="asignatura">Asignatura</option>
+                    </select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Nivel</mat-label>
+                                        <select matNativeControl required>
+                      <option value="completo">A</option>
+                      <option value="medio">B </option>
+                      <option value="asignatura">C</option>
+                    </select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Materia que imparten" type="text">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <button mat-raised-button type="submit" class="btn btn-danger
+                pull-right">Añadir</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
