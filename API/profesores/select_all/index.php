@@ -17,7 +17,7 @@
     if($headers['X-Api-Key'] === $api_key){ // Segundo nivel de seguridad
       $profesores = [];
       $respuesta = []; // Contendra la respuesta de la consulta
-      $query = "SELECT * FROM profesores WHERE deleted != 1"; // Filtra a todos los maestros de los han sido etiquetados como eliminados.
+      $query = "SELECT * FROM profesores"; // Filtra a todos los maestros de los han sido etiquetados como eliminados.
 
       try {
         $select_all = $mysqli->query( $query );

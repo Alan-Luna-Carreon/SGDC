@@ -11,7 +11,7 @@
   $headers = apache_request_headers();
   $api_key = '7cc263a1-a490-4337-8302-151490495e56';
 
-  require_once('../../mysqli.php'); // Archivo global con las conexiones a la base de datos
+  require_once('../../../mysqli.php'); // Archivo global con las conexiones a la base de datos
 
   if(isset($headers['X-Api-Key'])){ // Primer nivel de seguridad
     if($headers['X-Api-Key'] === $api_key){ // Segundo nivel de seguridad
@@ -22,37 +22,11 @@
        * diagonales invertidas
        */
       $id_profesor = addslashes($profesor->id_profesor);
-      $titulo = addslashes($profesor->titulo);
-      $codigo_udg = addslashes($profesor->codigo_udg);
-      $nombres = addslashes($profesor->nombres);
-      $apellido_paterno = addslashes($profesor->apellido_paterno);
-      $apellido_materno = addslashes($profesor->apellido_materno);
-      $fecha_nacimiento = addslashes($profesor->fecha_nacimiento);
-      $antiguedad = addslashes($profesor->antiguedad);
-      $telefono = addslashes($profesor->telefono);
-      $correo_principal = addslashes($profesor->correo_principal);
-      $correo_secundario = addslashes($profesor->correo_secundario);
-      $categoria = addslashes($profesor->categoria);
-      $nombramiento = addslashes($profesor->nombramiento);
-      $nivel = addslashes($profesor->nivel);
-      $materias = addslashes($profesor->materias); //#TODO: ¿cómo vamos a definir las materias de cada maestro?
+      $deleted = addslashes($profesor->deleted); 
       $respuesta = []; // Contendra la respuesta de la consulta
       
       $query = "UPDATE profesores SET
-                  titulo = '$titulo', -- NOT NULL
-                  codigo_udg = '$codigo_udg', -- NOT NULL
-                  nombres = '$nombres', -- NOT NULL
-                  apellido_paterno = '$apellido_paterno', -- NOT NULL
-                  apellido_materno = '$apellido_materno', 
-                  fecha_nacimiento = '$fecha_nacimiento', 
-                  antiguedad = '$antiguedad',
-                  telefono = '$telefono',
-                  correo_principal = '$correo_principal', -- NOT NULL
-                  correo_secundario = '$correo_secundario',
-                  categoria = '$categoria',
-                  nombramiento = '$nombramiento',
-                  nivel = '$nivel',
-                  materias = '$materias'
+                  deleted = '$deleted'
                 WHERE 
                   id_profesor = $id_profesor;";
 
