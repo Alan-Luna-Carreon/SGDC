@@ -54,6 +54,7 @@ export const AdminLayoutRoutes: Routes = [
     // }
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'registro-profesores',   component: RegistroProfesoresComponent },
+    { path: 'registro-profesores/:id',   component: RegistroProfesoresComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
