@@ -25,7 +25,8 @@
       $descripcion = addslashes( $curso->descripcion );
       $descripcion_corta = addslashes( $curso->descripcion_corta );
       $portada = addslashes( $curso->portada );
-      $fecha_hora = addslashes( $curso->fecha_hora );
+      $fecha = addslashes( $curso->fecha );
+      $hora = addslashes( $curso->hora );
       $presentador = addslashes( $curso->presentador );
       $organizador = addslashes( $curso->organizador );
       $direccion = addslashes( $curso->direccion );
@@ -41,7 +42,8 @@
                   descripcion,
                   descripcion_corta,
                   portada,
-                  fecha_hora,
+                  fecha,
+                  hora,
                   presentador,
                   organizador,
                   direccion,
@@ -55,7 +57,8 @@
                   '$descripcion',
                   '$descripcion_corta',
                   '$portada',
-                  '$fecha_hora',
+                  '$fecha',
+                  '$hora',
                   '$presentador',
                   '$organizador',
                   '$direccion',

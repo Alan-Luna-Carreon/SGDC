@@ -4,6 +4,10 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 /* Modulos a conservar */
 import { RegistroProfesoresComponent } from '../../registro-profesores/registro-profesores.component';
 import { ProfesoresComponent } from '../../profesores/profesores.component';
+import { RegistroCursosComponent } from '../../registro-cursos/registro-cursos.component';
+import { ListaCursosComponent } from '../../lista-cursos/lista-cursos.component';
+import { DetallesCursoComponent } from '../../detalles-curso/detalles-curso.component';
+
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
@@ -58,6 +62,11 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'registro-profesores',   component: RegistroProfesoresComponent },
     { path: 'registro-profesores/:id',   component: RegistroProfesoresComponent },
     { path: 'listado-profesores',   component: ProfesoresComponent },
+    { path: 'listado-cursos',   component: ListaCursosComponent },
+    { path: 'registro-cursos',   component: RegistroCursosComponent },
+    { path: 'registro-cursos/:id',   component: RegistroCursosComponent },
+    { path: 'detalles-cursos',   component: DetallesCursoComponent },
+    { path: 'registro-cursos',   component: RegistroCursosComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },

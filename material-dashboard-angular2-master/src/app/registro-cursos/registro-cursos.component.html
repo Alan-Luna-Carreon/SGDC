@@ -1,0 +1,101 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <i class="material-icons" style="float:left;">mic</i>
+                        <h4 class="card-title"> {{ texto_cabecera }} </h4>
+                        <p class="card-category"> {{ texto_subcabecera }} </p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <strong><h3><p>Información del curso:</p></h3></strong>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Indica el titulo de tu curso" [(ngModel)]="titulo" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Ingresa una descripción sobre tu curso" type="text" [(ngModel)]="descripcion" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Ingresa una descripción breve de tu curso" type="text" [(ngModel)]="descripcion_corta" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="picker" placeholder="¿Cuando será el curso?" [(ngModel)]="fecha" [ngModelOptions]="{standalone: true}">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="¿A que hora inicia el curso?" [(ngModel)]="hora" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="¿Quien será el presentador?" type="text" [(ngModel)]="presentador" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="¿Cuantos cupos tendra el curso?" type="text" [(ngModel)]="lugares_dispobibles" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Indica una imagen de portada" type="text" [(ngModel)]="portada" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">                        
+                                    <mat-form-field>
+                                        <mat-label>Estatus</mat-label>
+                                        <mat-select [(ngModel)]="estatus" [ngModelOptions]="{standalone: true}">
+                                            <mat-option *ngFor="let e of estatus_curso" [value]="e.value">
+                                                {{e.viewValue}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <strong><h3><p>Dirección y contacto:</p></h3></strong>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Indica la dirección del lugar" type="text" [(ngModel)]="direccion" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Copia la URL de google maps del evento" type="text" [(ngModel)]="url_google_maps" [ngModelOptions]="{standalone: true}">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <button mat-raised-button (click)="actionButtonClicked()" type="submit" class="btn btn-danger pull-right">
+                                {{ texto_boton }}
+                            </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

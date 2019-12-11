@@ -4,6 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'; 
+import {
+  MatFormFieldModule,
+  MatMenuModule,
+  MatCheckboxModule,
+  MatIconModule,
+  MatDatepickerModule,
+  MatNativeDateModule
+} from '@angular/material';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
@@ -21,6 +29,9 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 import { AgmCoreModule } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
+import { RegistroCursosComponent } from './registro-cursos/registro-cursos.component';
+import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
+import { DetallesCursoComponent } from './detalles-curso/detalles-curso.component';
 
 @NgModule({
   imports: [
@@ -32,6 +43,8 @@ import { ProfesoresComponent } from './profesores/profesores.component';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC6LBlzQnqVAmh26S6GoHY-tGp5qO5xwVo'
     })
@@ -41,7 +54,9 @@ import { ProfesoresComponent } from './profesores/profesores.component';
     AdminLayoutComponent,
 
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule, 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
