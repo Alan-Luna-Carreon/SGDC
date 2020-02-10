@@ -32,6 +32,7 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { RegistroCursosComponent } from './registro-cursos/registro-cursos.component';
 import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
 import { DetallesCursoComponent } from './detalles-curso/detalles-curso.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -52,6 +53,7 @@ import { DetallesCursoComponent } from './detalles-curso/detalles-curso.componen
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    LoginComponent,
 
   ],
   providers: [
